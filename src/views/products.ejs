@@ -3,27 +3,27 @@
 
 <head>
   <title>Products</title>
-
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navScroll">
-    <section id="features" class="ud-features">
-      <div class="row">
-        <div class="col-lg-7 py-vh-6 position-relative" style="margin-left: 100px;">
-          <h1>Hello World</h1>
-          <% products.map((product)=>{ %>
-            <h4>
-              <a href="/products/<%=product.id%>"><%=product.productTitle%></a>
-            </h4>
-            <p>
-              <%=product.productDescription%>
-            </p>
-            <p>ราคา : <%=product.productPrice%> บาท</p>
-            <% }) %>
-        </div>
+  <section id="features" class="ud-features">
+    <div class="row">
+      <div class="col-lg-7 py-vh-6 position-relative" style="margin-left: 100px;">
+        <h1>Products</h1>
+        <% products.map((product)=>{ %>
+          <h4>
+            <a href="/products/<%=product.id%>">
+              <%=product.productTitle%>
+            </a>
+          </h4>
+          <p>
+            <%=product.productDescription%>
+          </p>
+          <p>ราคา : <%=product.productPrice%> บาท</p>
+          <% }) %>
       </div>
-    </section>
-
+    </div>
+  </section>
 </body>
 
 </html>
