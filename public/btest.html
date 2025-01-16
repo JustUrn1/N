@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Butterfly Effect</title>
+    <link rel="stylesheet" href="bstyles.css">
+</head>
+
+<body>
+    <div class="butterfly-container">
+        <div class="butterfly"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+<script>
+    // Generate butterflies randomly across the page
+    function createButterflies() {
+        const container = document.querySelector('.butterfly-container');
+        for (let i = 0; i < 10; i++) {
+            const butterfly = document.createElement('div');
+            butterfly.classList.add('butterfly');
+
+            // Randomize butterfly positions and animations
+            butterfly.style.left = `${Math.random() * 100}vw`;
+            butterfly.style.top = `${Math.random() * 100}vh`;
+            butterfly.style.animationDuration = `${Math.random() * 5 + 3}s`; // Random animation duration
+
+            container.appendChild(butterfly);
+        }
+    }
+
+    window.onload = createButterflies;
+
+</script>
